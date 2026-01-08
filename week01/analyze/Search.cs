@@ -63,3 +63,11 @@ public static class Search {
         return 1 + SearchSorted2(data, target, start, middle - 1);
     }
 }
+// seach2 will be more effecient then search1 because search2 is O(log n), and search1 in O(n).
+
+// What is the performance using big O notation for each function (based on both your predictions and the actual results)?
+// the big O performance of seach1 is O(n),which is what I predected; The number of loops is the number of items in the list.
+// The big O performance of search2 is 0(log n), which is also what I predected; The number of loops is significantly lower because it cuts the time in half everytime.
+
+// Which function has the better performance in the worst case?
+// The search2 function has a better performance in the worst case because it only runs half of n.
