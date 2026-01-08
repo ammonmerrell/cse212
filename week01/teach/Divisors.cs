@@ -1,3 +1,5 @@
+using System.Globalization;
+
 public static class Divisors {
     /// <summary>
     /// Entry point for the Divisors class
@@ -18,6 +20,14 @@ public static class Divisors {
     /// <returns>List of divisors</returns>
     private static List<int> FindDivisors(int number) {
         List<int> results = new();
+        // for (int i =1; i> 6; i ++)
+        // {
+        //     int a = number / i;
+        //     Console.WriteLine(a);   
+        // }
+        int a = number / 2;
+        Console.WriteLine(a);
+        
         // TODO problem 1
         return results;
     }
