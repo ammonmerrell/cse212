@@ -5,6 +5,14 @@
         Console.Out.WriteLine("int[]{{{0}}}", string.Join(", ", numbers)); //int[]{1, 2, 3, 4, 6, 8, 9}
     }
 
+    // order from best to worst peformance when n is large:
+    // log n
+    // n log n
+    // n (also n(1))
+    // n(1) (also n)
+    // 2^n
+    // n ^2
+
     private static void SortArray(int[] data) {
         for (var sortPos = data.Length - 1; sortPos >= 0; sortPos--) {
             for (var swapPos = 0; swapPos < sortPos; ++swapPos) {

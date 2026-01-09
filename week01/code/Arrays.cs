@@ -13,6 +13,10 @@ public static class Arrays
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
 
+        // my plan is to use a for loop with the length var being the variable that determines the length of code.
+        for(int i = 1; i < length; i++)
+        Console.WriteLine(i);
+        // the loop itself will increase the number multiplied by one starting with 1.
         return []; // replace this return statement with your own
     }
 
