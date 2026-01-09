@@ -14,10 +14,25 @@ public static class Arrays
         // be implemented by another person.
 
         // my plan is to use a for loop with the length var being the variable that determines the length of code.
-        for(int i = 1; i < length; i++)
-        Console.WriteLine(i);
+        
+        // The function will create a list and add numbers to it as it goes through the loop.
+        var multiples = new double[] {};
+        // var multiples = new List<double> ();
+        // The function will create a var that will be a placeholder for the number added to the array.
+        double num = 0;
         // the loop itself will increase the number multiplied by one starting with 1.
-        return []; // replace this return statement with your own
+        for(int i = 1; i < length; i++)
+        {
+            Console.WriteLine(i);
+            num = number * i;
+             // insert the placeholder number into the array.
+            //  Convert array to list.
+             List<double> numlist = multiples.ToList();
+             numlist.Add(num);
+            // convert back to array.
+            multiples = numlist.ToArray();
+        }
+        return multiples; // replace this return statement with your own
     }
 
     /// <summary>
