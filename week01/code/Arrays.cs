@@ -1,3 +1,6 @@
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+
 public static class Arrays
 {
     /// <summary>
@@ -9,30 +12,26 @@ public static class Arrays
     public static double[] MultiplesOf(double number, int length)
     {
         // TODO Problem 1 Start
-        // Remember: Using comments in your program, write down your process for solving this problem
-        // step by step before you write the code. The plan should be clear enough that it could
-        // be implemented by another person.
 
-        // my plan is to use a for loop with the length var being the variable that determines the length of code.
+        // My plan is to use a for loop with the length var being the variable that determines the length of code.
         
         // The function will create a list and add numbers to it as it goes through the loop.
         var multiples = new double[] {};
-        // var multiples = new List<double> ();
         // The function will create a var that will be a placeholder for the number added to the array.
         double num = 0;
         // the loop itself will increase the number multiplied by one starting with 1.
-        for(int i = 1; i < length; i++)
+        for(int i = 1; i < length+1; i++)
         {
             Console.WriteLine(i);
             num = number * i;
-             // insert the placeholder number into the array.
             //  Convert array to list.
              List<double> numlist = multiples.ToList();
+             // insert the placeholder number into the list.
              numlist.Add(num);
             // convert back to array.
             multiples = numlist.ToArray();
         }
-        return multiples; // replace this return statement with your own
+        return multiples; 
     }
 
     /// <summary>
@@ -45,8 +44,23 @@ public static class Arrays
     public static void RotateListRight(List<int> data, int amount)
     {
         // TODO Problem 2 Start
-        // Remember: Using comments in your program, write down your process for solving this problem
-        // step by step before you write the code. The plan should be clear enough that it could
-        // be implemented by another person.
+
+        // My plan would be to use data.getRange() to create a new list with the larger numbers moved to the right.
+        // I would make a var "cut" that will split the list.
+        int cut = data.Count - amount;
+        // I would use data.getRange() to create a new list with the larger numbers moved to the right.
+        var large = new List<int> {};
+        large = data.GetRange(amount, data.Count-3);
+        // I would also use data.getRange() to create the rest of the list with the small numbers.
+        var small = new List<int> {};
+        small = data.GetRange(0, data.Count - amount);
+        // create a new list to merge the two lists togeather.
+        var newList = new List <int>{};
+        // merge the two lists togeather.
+        newList.AddRange(large);
+        newList.AddRange(small);
+        // copy the "newList" info to the original "data" list.
+        data = newList;
     }
+
 }
