@@ -8,6 +8,7 @@
         Console.WriteLine("Test 1");
         var queue = new SimpleQueue();
         queue.Enqueue(100);
+        queue.Enqueue(200);
         var value = queue.Dequeue();
         Console.WriteLine(value);
         // Defect(s) Found:
@@ -23,7 +24,10 @@
         queue.Enqueue(300);
         queue.Enqueue(400);
         value = queue.Dequeue();
+        value = queue.Dequeue();
         Console.WriteLine(value);
+        queue.Enqueue(300);
+        queue.Enqueue(400);
         value = queue.Dequeue();
         Console.WriteLine(value);
         value = queue.Dequeue();
