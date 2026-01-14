@@ -1,4 +1,7 @@
-﻿/// <summary>
+﻿using System.Data.Common;
+using System.Security.Cryptography.X509Certificates;
+
+/// <summary>
 /// Maintain a Customer Service Queue.  Allows new customers to be 
 /// added and allows customers to be serviced.
 /// </summary>
@@ -9,7 +12,9 @@ public class CustomerService {
         // Console.WriteLine(cs);
 
         // Test Cases
-
+        Console.WriteLine("enter line number: ");
+        var cs = new CustomerService(int.Parse(Console.ReadLine()));
+        Console.WriteLine(cs);
         // Test 1
         // Scenario: 
         // Expected Result: 
@@ -23,7 +28,10 @@ public class CustomerService {
         // Scenario: 
         // Expected Result: 
         Console.WriteLine("Test 2");
-
+       cs = new CustomerService(3);
+       Console.WriteLine(cs);
+       cs.AddNewCustomer();
+        Console.WriteLine(cs);
         // Defect(s) Found: 
 
         Console.WriteLine("=================");
