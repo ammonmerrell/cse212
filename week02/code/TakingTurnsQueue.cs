@@ -33,6 +33,8 @@ public class TakingTurnsQueue
     /// </summary>
     public Person GetNextPerson()
     {
+        Console.Write("queue befor checkout :");
+        Console.WriteLine(_people);
         if (_people.IsEmpty())
         {
             throw new InvalidOperationException("No one in the queue.");
@@ -43,9 +45,13 @@ public class TakingTurnsQueue
             if (person.Turns > 1)
             {
                 person.Turns -= 1;
+                _people.Dequeue();
                 _people.Enqueue(person);
+                
 
             }
+            Console.Write("queue after checkout :");
+            Console.WriteLine(_people);
             return person;
         }
     }
