@@ -44,8 +44,10 @@ public class TakingTurnsQueue
             {
                 person.Turns -= 1;
                 _people.Enqueue(person);
+                Console.WriteLine(person);
             }
 
+            Console.Write(person);
             return person;
         }
     }
