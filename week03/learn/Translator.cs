@@ -41,7 +41,7 @@ public class Translator
             string translation = _words[fromWord];
             return translation;
         }
-        if(!_words.ContainsKey(fromWord));
+        else
         {
             return "???";
         }
