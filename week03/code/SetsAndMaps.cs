@@ -105,6 +105,25 @@ public static class SetsAndMaps
     public static bool IsAnagram(string word1, string word2)
     {
         // TODO Problem 3 - ADD YOUR CODE HERE
+        var set1 = new HashSet<char>();
+        var set2 = new HashSet<string>();
+        foreach(char letter in word1)
+        {
+            Debug.WriteLine(letter);
+            set1.Add(letter);
+        }
+        foreach(char letter2 in word2)
+            {
+            // Debug.WriteLine(letter2);
+            if (!set1.Contains(letter2))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
         return false;
     }
 
