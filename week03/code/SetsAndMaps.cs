@@ -109,19 +109,24 @@ public static class SetsAndMaps
         var set2 = new HashSet<string>();
         foreach(char letter in word1)
         {
-            Debug.WriteLine(letter);
             set1.Add(letter);
         }
         foreach(char letter2 in word2)
             {
-            // Debug.WriteLine(letter2);
             if (!set1.Contains(letter2))
             {
                 return false;
             }
             else
             {
-                return true;
+                if(set1.Count() != word2.Length)
+                {
+                    return false;
+                }
+                else if(set1.Count() == word2.Length)
+                {
+                    return true;
+                }
             }
         }
         return false;
