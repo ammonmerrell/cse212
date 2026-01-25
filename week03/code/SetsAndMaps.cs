@@ -119,13 +119,13 @@ public static class SetsAndMaps
             }
             else
             {
-                if(set1.Count() != word2.Length)
-                {
-                    return false;
-                }
-                else if(set1.Count() == word2.Length)
+                if(set1.Count() == word2.Length)
                 {
                     return true;
+                }
+                else if(set1.Count() != word2.Length)
+                {
+                    return false;
                 }
             }
         }
