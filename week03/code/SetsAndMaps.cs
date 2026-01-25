@@ -109,11 +109,11 @@ public static class SetsAndMaps
         var set2 = new HashSet<char>();
         foreach(char letter in word1)
         {
-            set1.Add(letter);
+            set1.Add(char.ToLower(letter));
         }
         foreach(char letter2 in word2)
             {
-            if (!set1.Contains(letter2))
+            if (!set1.Contains(char.ToLower(letter2)))
             {
                 return false;
             }
