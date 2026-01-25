@@ -106,7 +106,7 @@ public static class SetsAndMaps
     {
         // TODO Problem 3 - ADD YOUR CODE HERE
         var set1 = new HashSet<char>();
-        var set2 = new HashSet<string>();
+        var set2 = new HashSet<char>();
         foreach(char letter in word1)
         {
             set1.Add(letter);
@@ -121,7 +121,11 @@ public static class SetsAndMaps
             {
                 if(set1.Count() == word2.Length)
                 {
-                    return true;
+                    if(set1.Count() == word1.Length)
+                    {
+                        return true;
+                    }
+                    // return true;
                 }
                 else if(set1.Count() != word2.Length)
                 {
