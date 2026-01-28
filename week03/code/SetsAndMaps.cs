@@ -110,7 +110,7 @@ public static class SetsAndMaps
         string newWord1 = "";
         string newWord2 = "";
         int num = 0;
-        int space = 0;
+    
 
         newWord1 = word1.Replace(" ", "").ToLower();
         newWord2 = word2.Replace(" ", "").ToLower();
