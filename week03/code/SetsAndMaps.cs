@@ -117,11 +117,7 @@ public static class SetsAndMaps
         }
         foreach(char letter2 in word2)
             {
-            if (!set1.Contains(char.ToLower(letter2)))
-            {
-                return false;
-            }
-            else
+            if (set1.Contains(char.ToLower(letter2)))
             {
                 if(set1.Count() == word2.Length)
                 {
@@ -135,6 +131,10 @@ public static class SetsAndMaps
                 {
                     return false;
                 }
+            }
+            else
+            {
+                return false;
             }
         }
         return false;
