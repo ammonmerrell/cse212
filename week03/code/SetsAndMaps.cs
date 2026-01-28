@@ -110,6 +110,10 @@ public static class SetsAndMaps
         foreach(char letter in word1)
         {
             set1.Add(char.ToLower(letter));
+            if(set1.Contains(' '))
+            {
+                set1.Remove(char.ToLower(letter));
+            }
         }
         foreach(char letter2 in word2)
             {
