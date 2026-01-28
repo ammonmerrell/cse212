@@ -128,7 +128,7 @@ public static class SetsAndMaps
         {
             if (set1.Contains(set2[i]))
             {
-                if(set1.Count() == word2.Length)
+                if(set1.Count() == set2.Count())
                 {
                     if(set1.Count() == word1.Length)
                     {
@@ -136,7 +136,7 @@ public static class SetsAndMaps
                     }
                     // return true;
                 }
-                else if(set1.Count() != word2.Length)
+                else if(set1.Count() != set2.Count())
                 {
                     return false;
                 }
