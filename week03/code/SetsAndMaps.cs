@@ -109,25 +109,17 @@ public static class SetsAndMaps
         var set2 = new List<char>();
         string newWord1 = "";
         string newWord2 = "";
-        newWord1 = word1.Replace(" ", "");
-        newWord2 = word2.Replace(" ", "");
+        newWord1 = word1.Replace(" ", "").ToLower();
+        newWord2 = word2.Replace(" ", "").ToLower();
         Debug.WriteLine(newWord1);
         Debug.WriteLine(newWord2);
         foreach(char letter in newWord1)
         {
             set1.Add(char.ToLower(letter));
-            // if(set1.Contains(' '))
-            // {
-            //     set1.Remove(char.ToLower(letter));
-            // }
         }
         foreach(char letter in newWord2)
         {
             set2.Add(char.ToLower(letter));
-            // if(set2.Contains(' '))
-            // {
-            //     set2.Remove(char.ToLower(letter));
-            // }
         }
 
         for(int i =0; i<set2.Count(); i++)
@@ -151,34 +143,6 @@ public static class SetsAndMaps
             {
                 return false;
             }
-
-
-
-
-            //     if(word2[i] != ' ')
-            //     {
-            //         set2.Add(char.ToLower(word2[i]));
-            //     }
-
-            // if (set1.Contains(set2[i]))
-            // {
-            //     if(set1.Count() == word2.Length)
-            //     {
-            //         if(set1.Count() == word1.Length)
-            //         {
-            //             return true;
-            //         }
-            //         // return true;
-            //     }
-            //     else if(set1.Count() != word2.Length)
-            //     {
-            //         return false;
-            //     }
-            // }
-            // else
-            // {
-            //     return false;
-            // }
         }
         return false;
     }
