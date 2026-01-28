@@ -107,21 +107,27 @@ public static class SetsAndMaps
         // TODO Problem 3 - ADD YOUR CODE HERE
         var set1 = new HashSet<char>();
         var set2 = new List<char>();
+        string newWord1 = "";
+        string newWord2 = "";
+        newWord1 = word1.Replace(" ", "");
+        newWord2 = word2.Replace(" ", "");
+        Debug.WriteLine(newWord1);
+        Debug.WriteLine(newWord2);
         foreach(char letter in word1)
         {
             set1.Add(char.ToLower(letter));
-            if(set1.Contains(' '))
-            {
-                set1.Remove(char.ToLower(letter));
-            }
+            // if(set1.Contains(' '))
+            // {
+            //     set1.Remove(char.ToLower(letter));
+            // }
         }
-        foreach(char letter in word2)
+        foreach(char letter in newWord2)
         {
             set2.Add(char.ToLower(letter));
-            if(set2.Contains(' '))
-            {
-                set2.Remove(char.ToLower(letter));
-            }
+            // if(set2.Contains(' '))
+            // {
+            //     set2.Remove(char.ToLower(letter));
+            // }
         }
 
         for(int i =0; i<set2.Count(); i++)
@@ -130,7 +136,7 @@ public static class SetsAndMaps
             {
                 if(set1.Count() == set2.Count())
                 {
-                    if(set1.Count() == word1.Length)
+                    if(set1.Count() == newWord1.Length)
                     {
                         return true;
                     }
