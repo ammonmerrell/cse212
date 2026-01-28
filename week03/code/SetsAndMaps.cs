@@ -116,14 +116,14 @@ public static class SetsAndMaps
             }
         }
 
-        foreach(char letter2 in word2)
-            {
-                if(letter2 != ' ')
+        for(int i =0; i<word2.Length; i++)
+        {
+                if(word2[i] != ' ')
                 {
-                    set2.Add(char.ToLower(letter2));
+                    set2.Add(char.ToLower(word2[i]));
                 }
 
-            if (set1.Contains(char.ToLower(letter2)))
+            if (set1.Contains(set2[i]))
             {
                 if(set1.Count() == word2.Length)
                 {
