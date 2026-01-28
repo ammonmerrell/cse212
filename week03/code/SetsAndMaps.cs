@@ -25,24 +25,7 @@ public static class SetsAndMaps
     public static string[] FindPairs(string[] words)
     {
         // TODO Problem 1 - ADD YOUR CODE HERE
-        // var set = new List<string>();
-        // var list = new List<char>();
-        // foreach (string i in words)
-        // {
-        //     Debug.Write("i: ");
-        //     Debug.WriteLine(i);
-        //     foreach(char c in i)
-        //     {
-        //         if(i.Contains(c))
-        //         Debug.Write("c:");
-                
-        //         list.Add(c);
-        //         Debug.WriteLine(c);
-        //     }
-        //     set.Add(i);
-        // }
-        // return [];
-
+        
         var set = new HashSet<char>();
         var list = new HashSet<string>();
         foreach(string i in words)
@@ -50,15 +33,7 @@ public static class SetsAndMaps
             list.Add(i);
             Debug.Write("i: ");
             Debug.WriteLine(i);
-            foreach(char c in i)
-            {
-                if (i.Contains(c))
-                {
-                    set.Add(c);
-                    Debug.Write("has ");
-                    Debug.WriteLine(c);
-                }
-            }
+            
         }
         return [];
     }
