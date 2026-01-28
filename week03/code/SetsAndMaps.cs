@@ -115,14 +115,17 @@ public static class SetsAndMaps
                 set1.Remove(char.ToLower(letter));
             }
         }
-
-        for(int i =0; i<word2.Length; i++)
+        foreach(char letter in word2)
         {
-                if(word2[i] != ' ')
-                {
-                    set2.Add(char.ToLower(word2[i]));
-                }
+            set2.Add(char.ToLower(letter));
+            if(set2.Contains(' '))
+            {
+                set2.Remove(char.ToLower(letter));
+            }
+        }
 
+        for(int i =0; i<set2.Count(); i++)
+        {
             if (set1.Contains(set2[i]))
             {
                 if(set1.Count() == word2.Length)
@@ -142,6 +145,34 @@ public static class SetsAndMaps
             {
                 return false;
             }
+
+
+
+
+            //     if(word2[i] != ' ')
+            //     {
+            //         set2.Add(char.ToLower(word2[i]));
+            //     }
+
+            // if (set1.Contains(set2[i]))
+            // {
+            //     if(set1.Count() == word2.Length)
+            //     {
+            //         if(set1.Count() == word1.Length)
+            //         {
+            //             return true;
+            //         }
+            //         // return true;
+            //     }
+            //     else if(set1.Count() != word2.Length)
+            //     {
+            //         return false;
+            //     }
+            // }
+            // else
+            // {
+            //     return false;
+            // }
         }
         return false;
     }
