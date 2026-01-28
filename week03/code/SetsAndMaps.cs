@@ -109,8 +109,11 @@ public static class SetsAndMaps
         var set2 = new List<char>();
         string newWord1 = "";
         string newWord2 = "";
+        int num = 0;
+
         newWord1 = word1.Replace(" ", "").ToLower();
         newWord2 = word2.Replace(" ", "").ToLower();
+
         Debug.WriteLine(newWord1);
         Debug.WriteLine(newWord2);
         foreach(char letter in newWord1)
@@ -126,7 +129,8 @@ public static class SetsAndMaps
         {
             if (set1.Contains(set2[i]))
             {
-                
+                num +=1;
+                Debug.Write(num);
             }
             else
             {
