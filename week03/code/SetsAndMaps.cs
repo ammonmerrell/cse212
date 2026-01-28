@@ -115,18 +115,25 @@ public static class SetsAndMaps
         Debug.WriteLine(newWord2);
         foreach(char letter in newWord1)
         {
-            set1.Add(char.ToLower(letter));
+            set1.Add(letter);
         }
         foreach(char letter in newWord2)
         {
-            set2.Add(char.ToLower(letter));
+            set2.Add(letter);
         }
 
         for(int i =0; i<set2.Count(); i++)
         {
             if (set1.Contains(set2[i]))
             {
-                if(set1.Count() == set2.Count())
+                
+            }
+            else
+            {
+                return false;
+            }
+        }
+        if(set1.Count() == set2.Count())
                 {
                     if(set1.Count() == newWord1.Length)
                     {
@@ -138,12 +145,6 @@ public static class SetsAndMaps
                 {
                     return false;
                 }
-            }
-            else
-            {
-                return false;
-            }
-        }
         return false;
     }
 
