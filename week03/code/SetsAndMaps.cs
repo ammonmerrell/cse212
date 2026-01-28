@@ -106,7 +106,7 @@ public static class SetsAndMaps
     {
         // TODO Problem 3 - ADD YOUR CODE HERE
         var set1 = new HashSet<char>();
-        var set2 = new HashSet<char>();
+        var set2 = new List<char>();
         foreach(char letter in word1)
         {
             set1.Add(char.ToLower(letter));
@@ -115,8 +115,14 @@ public static class SetsAndMaps
                 set1.Remove(char.ToLower(letter));
             }
         }
+
         foreach(char letter2 in word2)
             {
+                if(letter2 != ' ')
+                {
+                    set2.Add(char.ToLower(letter2));
+                }
+
             if (set1.Contains(char.ToLower(letter2)))
             {
                 if(set1.Count() == word2.Length)
