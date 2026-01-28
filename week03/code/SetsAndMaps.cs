@@ -113,7 +113,7 @@ public static class SetsAndMaps
         newWord2 = word2.Replace(" ", "");
         Debug.WriteLine(newWord1);
         Debug.WriteLine(newWord2);
-        foreach(char letter in word1)
+        foreach(char letter in newWord1)
         {
             set1.Add(char.ToLower(letter));
             // if(set1.Contains(' '))
