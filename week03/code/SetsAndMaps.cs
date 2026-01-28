@@ -105,52 +105,104 @@ public static class SetsAndMaps
     public static bool IsAnagram(string word1, string word2)
     {
         // TODO Problem 3 - ADD YOUR CODE HERE
-        var set1 = new HashSet<char>();
+        var set1 = new List<char>();
         var set2 = new List<char>();
         string newWord1 = "";
         string newWord2 = "";
         int num = 0;
+        int space = 0;
 
         newWord1 = word1.Replace(" ", "").ToLower();
         newWord2 = word2.Replace(" ", "").ToLower();
 
         Debug.WriteLine(newWord1);
         Debug.WriteLine(newWord2);
-        foreach(char letter in newWord1)
+        if(newWord1.Count() == newWord2.Count())
         {
-            set1.Add(letter);
-        }
-        foreach(char letter in newWord2)
-        {
-            set2.Add(letter);
-        }
-
-        for(int i =0; i<set2.Count(); i++)
-        {
-            if (set1.Contains(set2[i]))
+            foreach(char letter in newWord1)
             {
-                num +=1;
-                Debug.Write(num);
+                set1.Add(letter);
             }
-            else
+            foreach(char letter in newWord2)
             {
-                return false;
+                set2.Add(letter);
             }
-        }
-        if(set1.Count() == set2.Count())
+            for(int i =0; i < set1.Count(); i++)
+            {
+                for(int x =0; x < set2.Count(); x++)
                 {
-                    if(set1.Count() == newWord1.Length)
+                    if (set1[i] == set2[x])
                     {
-                        return true;
+                        
+                            Debug.Write(set1[i]);
+                            num +=1;
+                            // return true;
+                        
+                        
+                        
+                        
                     }
-                    // return true;
                 }
-                else if(set1.Count() != set2.Count())
-                {
-                    return false;
-                }
+                // if (set1.Contains(set2[i]))
+                // {
+                //     Debug.Write("true");
+                //     num+=1;
+                //     Debug.Write(num);
+                // }
+            }
+            if(num == newWord1.Count())
+            {
+                Debug.WriteLine("num == word1");
+                return true;
+            }
+            if(num == newWord2.Count())
+            {
+                Debug.WriteLine("num == word2");
+                return true;
+            }
+            if(num == set1.Count())
+            {
+                Debug.WriteLine("num == set1");
+                return true;
+            }
+            if(num == set2.Count())
+            {
+                Debug.WriteLine("num == set2");
+                return true;
+            }
+            Debug.WriteLine(num);
+            return false;
+        }
+        Debug.Write("NO");
         return false;
     }
+
+    //     for(int i =0; i<set2.Count(); i++)
+    //     {
+    //         if (set1.Contains(set2[i]))
+    //         {
+    //             num +=1;
+    //             Debug.Write(num);
+    //         }
+    //         else
+    //         {
+    //             return false;
+    //         }
+    //     }
+    //     if(set1.Count() == set2.Count())
+    //             {
+    //                 if(set1.Count() == newWord1.Length)
+    //                 {
+    //                     return true;
+    //                 }
+    //                 // return true;
+    //             }
+    //             else if(set1.Count() != set2.Count())
+    //             {
+    //                 return false;
+    //             }
+    //     return false;
+    // }
 
     /// <summary>
     /// This function will read JSON (Javascript Object Notation) data from the 
