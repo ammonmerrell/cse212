@@ -96,6 +96,8 @@ public static class SetsAndMaps
     {
         // TODO Problem 3 - ADD YOUR CODE HERE
         var set1 = new List<char>();
+        var dict1 = new Dictionary<char, int>();
+        var dict2 = new Dictionary<char, int>();
         var set2 = new List<char>();
         string newWord1 = "";
         string newWord2 = "";
@@ -112,10 +114,26 @@ public static class SetsAndMaps
             foreach(char letter in newWord1)
             {
                 set1.Add(letter);
+                if (!dict1.ContainsKey(letter))
+                {
+                    dict1[letter] = 0;
+                }
+                else
+                {
+                    dict1[letter] += 1;
+                }
             }
             foreach(char letter in newWord2)
             {
                 set2.Add(letter);
+                if (!dict2.ContainsKey(letter))
+                {
+                    dict2[letter] = 0;
+                }
+                else
+                {
+                    dict2[letter] += 1;
+                }
             }
             for(int i =0; i < set1.Count(); i++)
             {
@@ -126,6 +144,10 @@ public static class SetsAndMaps
                         
                             Debug.Write(set1[i]);
                             num +=1;
+                            if(word1.Contains(" "))
+                        {
+                            return true;
+                        }
                             // return true;
                         
                         
@@ -133,12 +155,6 @@ public static class SetsAndMaps
                         
                     }
                 }
-                // if (set1.Contains(set2[i]))
-                // {
-                //     Debug.Write("true");
-                //     num+=1;
-                //     Debug.Write(num);
-                // }
             }
             if(num == newWord1.Count())
             {
