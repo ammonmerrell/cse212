@@ -28,13 +28,28 @@ public static class SetsAndMaps
         
         
         var list = new List<string>();
-        var set = new HashSet<char>();
+        var set = new HashSet<string>();
+        string st = "";
         for(int i =0;i<words.Count(); i++)
         {
             list.Add(words[i]);
             Debug.WriteLine(words[i]);
-            
+            set.Add(words[i]);
+            Debug.WriteLine("set "+words[i]);
         }
+
+        for(int i =0;i<words[0].Count(); i++)
+        {
+            if (set.Contains(list[i]))
+            {
+                Debug.WriteLine(list[i]+" TRUE");
+            }
+            if(list[i]== list[i])
+            {
+                Debug.WriteLine("SAME");
+            }
+        }
+        
         return [];
     }
 
