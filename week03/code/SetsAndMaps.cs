@@ -109,7 +109,7 @@ public static class SetsAndMaps
 
         Debug.WriteLine(newWord1);
         Debug.WriteLine(newWord2);
-        if(newWord1.Count() == newWord2.Count())
+        if(newWord1.Length == newWord2.Length)        
         {
             foreach(char letter in newWord1)
             {
