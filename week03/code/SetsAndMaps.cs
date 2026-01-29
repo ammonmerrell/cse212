@@ -146,7 +146,11 @@ public static class SetsAndMaps
                             num +=1;
                             if(word1.Contains(" "))
                         {
-                            return true;
+                            if(dict1.Count()== dict2.Count())
+                            {
+                                return true;
+                            }
+                            
                         }
                             // return true;
                         
