@@ -29,7 +29,7 @@ public static class SetsAndMaps
         
         var list = new List<string>();
         var set = new HashSet<string>();
-        string st = "";
+        // string st = "";
         for(int i =0;i<words.Count(); i++)
         {
             list.Add(words[i]);
