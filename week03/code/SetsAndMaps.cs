@@ -26,13 +26,13 @@ public static class SetsAndMaps
     {
         // TODO Problem 1 - ADD YOUR CODE HERE
         
+        
+        var list = new List<string>();
         var set = new HashSet<char>();
-        var list = new HashSet<string>();
-        foreach(string i in words)
+        for(int i =0;i<words.Count(); i++)
         {
-            list.Add(i);
-            Debug.Write("i: ");
-            Debug.WriteLine(i);
+            list.Add(words[i]);
+            Debug.WriteLine(words[i]);
             
         }
         return [];
