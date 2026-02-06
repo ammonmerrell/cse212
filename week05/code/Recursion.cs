@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Diagnostics;
+using System.Linq.Expressions;
 
 public static class Recursion
 {
@@ -140,6 +141,40 @@ public static class Recursion
     public static void WildcardBinary(string pattern, List<string> results)
     {
         // TODO Start Problem 4
+        if (!pattern.Contains("*"))
+        {
+            
+        }
+        else
+        {
+            string line = "";
+            char cur = '\0';
+            // for(int x = 0; x<pattern.Length; x++)
+            // {
+                for(int i = 0; i<pattern.Length; i++)
+                {
+                    if (pattern[i] == '*')
+                    {
+                        cur = '0';
+                    }
+                    else
+                    {
+                        cur = pattern[i];
+                    }
+                    Debug.WriteLine("Cur is a  "+cur);
+                    line += cur;
+                    Debug.Write(line);
+                    if(line.Length == pattern.Length)
+                    {
+                        Debug.WriteLine(" ");
+                    }
+                }
+                Debug.WriteLine("");
+                results.Add(line);
+                
+            // }
+            
+        }
     }
 
     /// <summary>
