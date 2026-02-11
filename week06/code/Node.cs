@@ -12,6 +12,10 @@ public class Node
     public void Insert(int value)
     {
         // TODO Start Problem 1
+        if(Data == 0)
+        {
+            Data = value;
+        }
 
         if (value < Data)
         {
