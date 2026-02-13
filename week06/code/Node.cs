@@ -62,7 +62,7 @@ public class Node
             else 
             {
                 Debug.WriteLine(Left is not null);
-                Left.Contains(value);
+                // Left.Contains(value);
             }
             
         }
