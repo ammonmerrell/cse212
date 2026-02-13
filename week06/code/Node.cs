@@ -52,26 +52,30 @@ public class Node
         {
             return true;
         }
+        Debug.WriteLine((value < Data));
         if(value < Data)
         {
             if(Left is null)
             {
                 
             }
-            else
+            else 
             {
+                Debug.WriteLine(Left is not null);
                 Left.Contains(value);
             }
             
         }
         else
         {
+            Debug.WriteLine(Right is not null);
             if(Right is null)
             {
                 
             }
             else
             {
+                Debug.WriteLine("Right: "+(value < Data));
                 Right.Contains(value);
                 
             }
