@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 public class Node
 {
     public int Data { get; set; }
@@ -16,8 +18,13 @@ public class Node
         {
             Data = value;
         }
-
-        if (value < Data)
+        if(value == Data)
+        {
+            
+        }
+        else
+        {
+             if (value < Data)
         {
             // Insert to the left
             if (Left is null)
@@ -33,6 +40,9 @@ public class Node
             else
                 Right.Insert(value);
         }
+        }
+
+       
     }
 
     public bool Contains(int value)
